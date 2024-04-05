@@ -867,10 +867,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-
     **Objectives:**
 
-    
+
 
     1. Build up credits to buy towers!
 
@@ -880,33 +879,33 @@ MonoBehaviour:
     3.
     Make it through as many rounds as you can!
 
-    
+
 
     **Towers:**
 
-    
+
+
+    1. When
+    you buy a tower, place it on the field to stop enemies from reaching the end.
+
+    2.
+    Upgrade the towers with credits to increase your firepower!
+
+
+
+    **Key Details:**
+
+
 
     1.
-    When you buy a tower, place it on the field to stop enemies from reaching the
-    end.
+    Don''t forget to switch perspectives to make sure an enemy doesn''t slip past
+    you!
 
-    2. Upgrade the towers with credits to increase your firepower!
+    2. You might need more firepower for different enemies, which might
+    require selling towers to buy more cheaper ones...
 
-    
-
-    **Key
-    Details:**
-
-    
-
-    1. Don''t forget to switch perspectives to make sure
-    an enemy doesn''t slip past you!
-
-    2. You might need more firepower for different
-    enemies, which might require selling towers to buy more cheaper ones...
-
-    3.
-    Watch your health as when it reaches zero the game ends!!!
+    3. Watch your health
+    as when it reaches zero the game ends!!!
 
 '
   m_isRightToLeft: 0
@@ -935,8 +934,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
