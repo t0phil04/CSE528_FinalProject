@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     
     public int bulletDamage = 10;
     public float moveSpeed=10;
-    public GameObject explodeEffect;//子弹的爆炸特效
+    public GameObject explodeEffect;
     
     void Update ()  
     {

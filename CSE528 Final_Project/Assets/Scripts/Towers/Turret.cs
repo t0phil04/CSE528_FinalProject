@@ -10,16 +10,16 @@ public class Turret : MonoBehaviour
     private Transform rotationAxis; 
     private float timer = 0;
     
-    public float attack_CD_Time = 1;//攻击间隔
+    public float attack_CD_Time = 1;
     
-    public List<GameObject> enemyList = new List<GameObject> ();//在塔范围内的敌人
-    public GameObject bullet;//攻击时发射的子弹
+    public List<GameObject> enemyList = new List<GameObject> ();
+    public GameObject bullet;
 
     void Start () 
     {
         rotationAxis = transform.Find ("RotationAxis");
         firePoint = rotationAxis.transform.Find("FirePoint");
-        timer = attack_CD_Time;//塔被创建时有敌人会攻击一次
+        timer = attack_CD_Time;
     }
     
     void Update()
