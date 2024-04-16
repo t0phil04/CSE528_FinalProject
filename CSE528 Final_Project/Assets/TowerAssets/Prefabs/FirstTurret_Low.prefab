@@ -774,7 +774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659511587627404872}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.15, y: 0.049999997, z: 2.779}
   m_LocalScale: {x: 20.26786, y: 20.26786, z: 20.26786}
   m_ConstrainProportionsScale: 0
@@ -797,7 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack_CD_Time: 1
   enemyList: []
-  bullet: {fileID: 6765888569927949696, guid: 5aba6a5ef4ae3844e943d18f4c4f66ac, type: 3}
+  bullet: {fileID: 6539882166828758740, guid: 0b10275409783584fb2e177116bbecec, type: 3}
 --- !u!54 &1617159894699114118
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -844,7 +844,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.15
+  m_Radius: 0.1448329
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &720479328815887141
 GameObject:
