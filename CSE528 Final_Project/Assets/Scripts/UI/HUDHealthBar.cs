@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class HUDHealthBar : MonoBehaviour
@@ -6,17 +7,22 @@ public class HUDHealthBar : MonoBehaviour
     [Tooltip("Image component displaying current health")]
     public Image HealthFillImage;
 
-    public int maxHealth = 100;
-    private int currentHealth;
+    public TextMeshProUGUI roundText;
 
+    public float maxHealth = 100;
+    private float currentHealth;
+
+    public static HUDHealthBar Instance;
     void Start()
     {
+        Instance = this;
+        
         currentHealth = maxHealth;
         UpdateHealthBar();
     }
 
     // Method to decrease player's health
-    public void DecreaseHealth(int amount)
+    public void DecreaseHealth(float amount)
     {
         currentHealth -= amount;
         if (currentHealth < 0)
@@ -29,6 +35,6 @@ public class HUDHealthBar : MonoBehaviour
     // Update the health bar display
     private void UpdateHealthBar()
     {
-        HealthFillImage.fillAmount = (float)currentHealth / maxHealth;
+        HealthFillImage.fillAmount = currentHealth / maxHealth;
     }
 }

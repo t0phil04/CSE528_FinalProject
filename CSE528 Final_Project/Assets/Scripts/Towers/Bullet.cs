@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
     {
         if (collider.tag == "Enemy")
         {
-            //col.gameObject.GetComponent<Enemy> ().TakeDamage (damage);
+            collider.gameObject.GetComponent<Enemy>().TakeDamage(bulletDamage);
             GameObject explodeEffectObj = Instantiate(explodeEffect, transform.position, transform.rotation);
             Destroy(gameObject);
             Destroy(explodeEffectObj, 1f);

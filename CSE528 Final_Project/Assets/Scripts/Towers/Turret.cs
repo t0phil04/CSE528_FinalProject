@@ -15,6 +15,8 @@ public class Turret : MonoBehaviour
     public List<GameObject> enemyList = new List<GameObject> ();
     public GameObject bullet;
 
+    public float rotationAxisSpeed = 5f;
+
     void Start () 
     {
         rotationAxis = transform.Find ("RotationAxis");
@@ -30,7 +32,11 @@ public class Turret : MonoBehaviour
         {
             Vector3 pos = enemyList[0].transform.position;
             pos.y = rotationAxis.position.y;
-            rotationAxis.LookAt(pos);
+            // rotationAxis.LookAt(pos);
+            
+            Vector3 direction = pos - rotationAxis.position;
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            rotationAxis.rotation = Quaternion.Slerp(rotationAxis.rotation, targetRotation, rotationAxisSpeed * Time.deltaTime);
         }
         if (timer >= attack_CD_Time && enemyList.Count > 0)
         {

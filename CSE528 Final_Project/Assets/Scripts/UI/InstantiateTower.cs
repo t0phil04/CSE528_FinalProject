@@ -11,6 +11,7 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
     {
         // Spawn the prefab and enable movement
         spawnedObject = Instantiate(prefabToSpawn, GetWorldPosition(eventData.position), Quaternion.identity);
+        spawnedObject.GetComponent<Turret>().enabled = false;
         isMoving = true;
     }
 
@@ -27,12 +28,13 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
     {
         // Disable movement when the pointer is lifted
         isMoving = false;
+        spawnedObject.GetComponent<Turret>().enabled = true;
     }
 
     private Vector3 GetWorldPosition(Vector2 screenPosition)
     {
         Ray ray = Camera.main.ScreenPointToRay(screenPosition);
-        float distance = (37f - Camera.main.transform.position.y) / Mathf.Cos((Mathf.PI / 180f) * Vector3.Angle(ray.direction, Vector3.down));
+        float distance = (Camera.main.transform.position.y - 0.345f) / Mathf.Cos((Mathf.PI / 180f) * Vector3.Angle(ray.direction, Vector3.down));
         return ray.GetPoint(distance);
     }
 }
