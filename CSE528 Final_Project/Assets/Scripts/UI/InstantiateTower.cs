@@ -7,12 +7,26 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
     private GameObject spawnedObject;
     private bool isMoving = false;
 
+    public TowerBlueprint tower;
+
+    public HUDCurrency hudCurrency;
+
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        // Spawn the prefab and enable movement
-        spawnedObject = Instantiate(prefabToSpawn, GetWorldPosition(eventData.position), Quaternion.identity);
-        spawnedObject.GetComponent<Turret>().enabled = false;
-        isMoving = true;
+        // If the player has enough money to afford a specific tower, Spawn the prefab and enable movement
+        if (PlayerStats.Money >= tower.cost)
+        {
+            spawnedObject = Instantiate(prefabToSpawn, GetWorldPosition(eventData.position), Quaternion.identity);
+            spawnedObject.GetComponent<Turret>().enabled = false;
+            isMoving = true;
+        }
+        // If the player does not have enough money to afford a tower, print to the console that there are insufficient funds, and disallow movement.
+        else
+        {
+            Debug.Log("Insufficient funds.");
+            return;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -29,6 +43,21 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
         // Disable movement when the pointer is lifted
         isMoving = false;
         spawnedObject.GetComponent<Turret>().enabled = true;
+
+        // If the player has the sufficient funds, subtract the cost of the tower from the player's wallet, and then print that the tower has been purchased to the console.
+        if (PlayerStats.Money >= tower.cost)
+        {
+            PlayerStats.Money -= tower.cost;
+            Debug.Log("Turret Purchased.");
+        }
+        else
+        {
+            Debug.Log("You can't place a tower yet!"); // player does not have the sufficient funds for the tower they tried to purchase/place.
+            return;
+        }
+
+        // Update currency UI
+        hudCurrency.UpdateCurrency();
     }
 
     private Vector3 GetWorldPosition(Vector2 screenPosition)

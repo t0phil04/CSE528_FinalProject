@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 {
 	public float enemyMoveSpeed = 3;
 	public float enemyDamage = 10f;
-	public int HP = 200;
+	public int HP = 150;
 	public GameObject enemyExpEffect;
 	
 	
