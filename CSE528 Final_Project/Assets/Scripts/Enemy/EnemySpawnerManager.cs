@@ -23,6 +23,7 @@ public class EnemySpawnerManager : MonoBehaviour
     void Start () 
     {
         StartCoroutine (CreateEnemy ());
+        
     }
 
     IEnumerator CreateEnemy()
@@ -41,6 +42,7 @@ public class EnemySpawnerManager : MonoBehaviour
                     yield return new WaitForSeconds(wave.CD_Timer);
                 }
             }
+            
             while (currentEnemyCount > 0)
             {
                 yield return 0;

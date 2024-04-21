@@ -40,9 +40,27 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
+
+        // If spawnedObject is null, return to avoid NullReferenceException
+        if (spawnedObject == null)
+        {
+            Debug.LogWarning("spawnedObject is null in OnPointerUp.");
+            return;
+        }
+
         // Disable movement when the pointer is lifted
         isMoving = false;
-        spawnedObject.GetComponent<Turret>().enabled = true;
+
+        // Enable the Turret component if spawnedObject is not null
+        Turret turret = spawnedObject.GetComponent<Turret>();
+        if (turret != null)
+        {
+            turret.enabled = true;
+        }
+        else
+        {
+            Debug.LogWarning("Turret component not found on spawnedObject.");
+        }
 
         // If the player has the sufficient funds, subtract the cost of the tower from the player's wallet, and then print that the tower has been purchased to the console.
         if (PlayerStats.Money >= tower.cost)
