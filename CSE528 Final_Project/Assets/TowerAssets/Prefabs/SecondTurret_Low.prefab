@@ -328,6 +328,8 @@ GameObject:
   - component: {fileID: 8206220588736473833}
   - component: {fileID: 2928207399297039043}
   - component: {fileID: 7247817288321540149}
+  - component: {fileID: 2885724630458508586}
+  - component: {fileID: -7466375796683114597}
   m_Layer: 0
   m_Name: SecondTurret_Low
   m_TagString: Untagged
@@ -415,6 +417,40 @@ MonoBehaviour:
   attack_CD_Time: 1
   enemyList: []
   bullet: {fileID: 5628759018569009869, guid: bacc9de6a6dbbb947a70ee2e3df52fb5, type: 3}
+  rotationAxisSpeed: 5
+--- !u!114 &2885724630458508586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8432363046076937179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c8a24ec94bd3141a31f17a65b972c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 0}
+  UpgradeSellUI: {fileID: 0}
+  tower:
+    cost: 0
+    upgradeCost: 0
+  hudCurrency: {fileID: 0}
+--- !u!114 &-7466375796683114597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8432363046076937179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05ce6fccd79fe240824229db1a608b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeSellUI: {fileID: 0}
+  upgradeButton: {fileID: 0}
+  sellButton: {fileID: 0}
 --- !u!1 &9166901518185045603
 GameObject:
   m_ObjectHideFlags: 0

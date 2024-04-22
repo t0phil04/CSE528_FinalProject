@@ -5,6 +5,7 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
 {
     public GameObject prefabToSpawn;
     private GameObject spawnedObject;
+    public Canvas UpgradeSellUI;
     private bool isMoving = false;
 
     public TowerBlueprint tower;
@@ -60,6 +61,15 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
         else
         {
             Debug.LogWarning("Turret component not found on spawnedObject.");
+        }
+
+        // if there is a spawned object, add component Modify Tower and add UpgradeSellUI
+        if (spawnedObject != null)
+        {
+            spawnedObject.AddComponent<ModifyTower>();
+
+            ModifyTower modify = spawnedObject.GetComponent<ModifyTower>();
+            modify.UpgradeSellUI = UpgradeSellUI;
         }
 
         // If the player has the sufficient funds, subtract the cost of the tower from the player's wallet, and then print that the tower has been purchased to the console.
