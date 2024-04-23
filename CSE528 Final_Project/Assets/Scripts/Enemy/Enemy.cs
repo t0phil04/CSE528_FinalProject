@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
 
 	private Transform[] points = null;
 	private Slider hpSlider = null;
+
+	public int value = 50;
 	
 	void Start () 
 	{
@@ -59,11 +61,13 @@ public class Enemy : MonoBehaviour
 		Die();
 	}
 
-	void Die()
+	public void Die()
 	{
 		GameObject enemyExpGO = Instantiate(enemyExpEffect, transform.position, transform.rotation);
 		Destroy(enemyExpGO, 1.5f);
 		Destroy(gameObject);
+
+		PlayerStats.Money += value;
 	}
 
 	private void OnTriggerEnter(Collider collider)

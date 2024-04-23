@@ -11,6 +11,11 @@ public class ModifyTower : MonoBehaviour
     public Button upgradeButton;
     public Button sellButton;
 
+    [HideInInspector]
+    public TowerBlueprint tower;
+    [HideInInspector]
+    public bool isUpgraded = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,9 +39,23 @@ public class ModifyTower : MonoBehaviour
         }
     }
 
+    public void HideUI()
+    {
+        UpgradeSellUI.gameObject.SetActive(false);
+    }
+
     public void UpgradeTower()
     {
+        if (PlayerStats.Money < tower.upgradeCost)
+        {
+            Debug.Log("Not enough money to upgrade that!");
+            return;
+        }
 
+        // Subtract upgrade cost from player's money balance
+        PlayerStats.Money -= tower.upgradeCost;
+
+        Debug.Log("Tower upgraded!");
     }
 
     public void SellTower()

@@ -17,6 +17,7 @@ public class EnemySpawnerManager : MonoBehaviour
     
     public WaveAttribute[] waveAttribute;
     public float wave_CD_Time = 6;
+    public int moneyPerRound = 250;
     
     public Transform startPoint;
     
@@ -47,6 +48,10 @@ public class EnemySpawnerManager : MonoBehaviour
             {
                 yield return 0;
             }
+
+            // get money when wave ends
+            PlayerStats.Money += moneyPerRound;
+
             yield return new WaitForSeconds(wave_CD_Time);
         }
     }

@@ -10,6 +10,8 @@ public class HUDCurrency : MonoBehaviour
 
     public TowerBlueprint tower;
 
+    private Enemy enemy;
+
     public static HUDCurrency Instance;
 
     void Start()
@@ -23,6 +25,7 @@ public class HUDCurrency : MonoBehaviour
     public void DecreaseCurrency()
     {
         PlayerStats.Money -= tower.cost;
+        PlayerStats.Money -= tower.upgradeCost;
         if(PlayerStats.Money < 0)
         {
             PlayerStats.Money = 0;
@@ -38,5 +41,10 @@ public class HUDCurrency : MonoBehaviour
         {
             PlayerStats.Money = 0;
         }
+    }
+
+    void Update()
+    {
+        UpdateCurrency();
     }
 }
