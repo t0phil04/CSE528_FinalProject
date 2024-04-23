@@ -19,6 +19,7 @@ public class LoadNewScene : MonoBehaviour
 
     public void LoadTargetScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
 }

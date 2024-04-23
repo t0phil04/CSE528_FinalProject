@@ -16,6 +16,8 @@ public class Turret : MonoBehaviour
     public GameObject bullet;
 
     public float rotationAxisSpeed = 5f;
+    
+    public TowerBlueprint towerBlueprint;
 
     void Start () 
     {

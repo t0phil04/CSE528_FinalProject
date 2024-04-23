@@ -759,8 +759,6 @@ GameObject:
   - component: {fileID: 7892784806969877825}
   - component: {fileID: 1617159894699114118}
   - component: {fileID: 558694413965327368}
-  - component: {fileID: -1227110537978861604}
-  - component: {fileID: 6669528792010820205}
   m_Layer: 0
   m_Name: FirstTurret_Low
   m_TagString: Untagged
@@ -849,39 +847,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.1448329
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1227110537978861604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659511587627404872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c8a24ec94bd3141a31f17a65b972c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 0}
-  UpgradeSellUI: {fileID: 0}
-  tower:
-    cost: 0
-    upgradeCost: 0
-  hudCurrency: {fileID: 0}
---- !u!114 &6669528792010820205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659511587627404872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f05ce6fccd79fe240824229db1a608b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UpgradeSellUI: {fileID: 0}
-  upgradeButton: {fileID: 0}
-  sellButton: {fileID: 0}
 --- !u!1 &720479328815887141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815478242631629183}
+  - component: {fileID: 8795588309816573857}
   m_Layer: 0
   m_Name: RotationAxis
   m_TagString: Untagged
@@ -2791,6 +2757,27 @@ Transform:
   - {fileID: 6210796991090669177}
   m_Father: {fileID: 4377446971190596982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8795588309816573857
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2310820228379560815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.06740842, y: 0.10851502, z: 0.06913872}
+  m_Center: {x: -0.0008652313, y: -0.037609898, z: 0.008651057}
 --- !u!1 &2409663126649695499
 GameObject:
   m_ObjectHideFlags: 0

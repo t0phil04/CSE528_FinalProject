@@ -12,11 +12,16 @@ public class HUDHealthBar : MonoBehaviour
     public float maxHealth = 100;
     private float currentHealth;
 
+    public int startMoney = 500;
+
     public static HUDHealthBar Instance;
+
+    public GameObject successPanel;
+    public GameObject failPanel;
     void Start()
     {
         Instance = this;
-        
+        PlayerStats.Money = startMoney;
         currentHealth = maxHealth;
         UpdateHealthBar();
     }
@@ -30,6 +35,11 @@ public class HUDHealthBar : MonoBehaviour
             currentHealth = 0;
         }
         UpdateHealthBar();
+        if (currentHealth == 0)
+        {
+            failPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
     // Update the health bar display

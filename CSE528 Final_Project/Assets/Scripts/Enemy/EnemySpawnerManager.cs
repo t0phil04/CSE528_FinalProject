@@ -29,6 +29,7 @@ public class EnemySpawnerManager : MonoBehaviour
 
     IEnumerator CreateEnemy()
     {
+        yield return new WaitForSeconds(3);
         for (int i = 0; i < waveAttribute.Length; i++)
         {
             var wave = waveAttribute[i];
@@ -54,5 +55,6 @@ public class EnemySpawnerManager : MonoBehaviour
 
             yield return new WaitForSeconds(wave_CD_Time);
         }
+        HUDHealthBar.Instance.successPanel.SetActive(true);
     }
 }

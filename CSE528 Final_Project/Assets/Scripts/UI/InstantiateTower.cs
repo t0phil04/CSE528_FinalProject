@@ -5,12 +5,12 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
 {
     public GameObject prefabToSpawn;
     private GameObject spawnedObject;
-    public Canvas UpgradeSellUI;
+    //public Canvas UpgradeSellUI;
     private bool isMoving = false;
 
     public TowerBlueprint tower;
 
-    public HUDCurrency hudCurrency;
+    // public HUDCurrency hudCurrency;
 
 
     public void OnPointerDown(PointerEventData eventData)
@@ -57,20 +57,21 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
         if (turret != null)
         {
             turret.enabled = true;
+            turret.towerBlueprint = tower;
         }
         else
         {
             Debug.LogWarning("Turret component not found on spawnedObject.");
         }
 
-        // if there is a spawned object, add component Modify Tower and add UpgradeSellUI
-        if (spawnedObject != null)
-        {
-            spawnedObject.AddComponent<ModifyTower>();
-
-            ModifyTower modify = spawnedObject.GetComponent<ModifyTower>();
-            modify.UpgradeSellUI = UpgradeSellUI;
-        }
+        // // if there is a spawned object, add component Modify Tower and add UpgradeSellUI
+        // if (spawnedObject != null)
+        // {
+        //     spawnedObject.AddComponent<ModifyTower>();
+        //
+        //     ModifyTower modify = spawnedObject.GetComponent<ModifyTower>();
+        //     modify.UpgradeSellUI = UpgradeSellUI;
+        // }
 
         // If the player has the sufficient funds, subtract the cost of the tower from the player's wallet, and then print that the tower has been purchased to the console.
         if (PlayerStats.Money >= tower.cost)
@@ -85,7 +86,7 @@ public class InstantiateTower : MonoBehaviour, IPointerDownHandler, IDragHandler
         }
 
         // Update currency UI
-        hudCurrency.UpdateCurrency();
+        //hudCurrency.UpdateCurrency();
     }
 
     private Vector3 GetWorldPosition(Vector2 screenPosition)

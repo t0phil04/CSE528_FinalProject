@@ -17,21 +17,19 @@ public class HUDCurrency : MonoBehaviour
     void Start()
     {
         Instance = this;
-
-        PlayerStats.Money = 500;
         UpdateCurrency();
     }
 
-    public void DecreaseCurrency()
-    {
-        PlayerStats.Money -= tower.cost;
-        PlayerStats.Money -= tower.upgradeCost;
-        if(PlayerStats.Money < 0)
-        {
-            PlayerStats.Money = 0;
-        }
-        UpdateCurrency();
-    }
+    // public void DecreaseCurrency()
+    // {
+    //     PlayerStats.Money -= tower.cost;
+    //     PlayerStats.Money -= tower.upgradeCost;
+    //     if(PlayerStats.Money < 0)
+    //     {
+    //         PlayerStats.Money = 0;
+    //     }
+    //     UpdateCurrency();
+    // }
 
     public void UpdateCurrency()
     {
