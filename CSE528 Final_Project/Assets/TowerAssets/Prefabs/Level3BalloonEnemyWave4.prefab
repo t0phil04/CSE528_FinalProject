@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 2031139180108187747}
   - component: {fileID: 3086421630706765879}
   - component: {fileID: 6760850695365370637}
+  - component: {fileID: -7298730392327906733}
   m_Layer: 0
   m_Name: Level3BalloonEnemyWave4
   m_TagString: Enemy
@@ -329,8 +330,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMoveSpeed: 9
   enemyDamage: 20
-  HP: 300
+  HP: 225
   enemyExpEffect: {fileID: 1173895295807974, guid: f4cc10602fa0c0548a24adfe2cbf1ff6, type: 3}
+  audioManager: {fileID: -7298730392327906733}
   value: 150
 --- !u!135 &6760850695365370637
 SphereCollider:
@@ -353,6 +355,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.2607399
   m_Center: {x: 0, y: -0.08967316, z: 0}
+--- !u!114 &-7298730392327906733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4163284408152699519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cde2e740b297d41b9828a94172f665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTickSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathBalloonSound: {fileID: 8300000, guid: 65b7d1df144c6944cab9d6686649df0b, type: 3}
 --- !u!1 &5024636401087882959
 GameObject:
   m_ObjectHideFlags: 0

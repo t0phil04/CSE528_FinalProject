@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 9132650440285975525}
   - component: {fileID: 6338079774118074959}
   - component: {fileID: 4990645355959719572}
+  - component: {fileID: 2855157031418332655}
   m_Layer: 0
   m_Name: Arrow_Low
   m_TagString: Untagged
@@ -178,6 +179,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bdf0abedef3d34b9fc4dfc83364fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 12
-  moveSpeed: 15
+  bulletDamage: 30
+  moveSpeed: 20
   explodeEffect: {fileID: 1173895295807974, guid: 4a6634c606101a446a027dbb8abf89c0, type: 3}
+  audioManager: {fileID: 2855157031418332655}
+--- !u!114 &2855157031418332655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539882166828758740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cde2e740b297d41b9828a94172f665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTickSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 0d44f0cb2e91f5f4ca09aded9a1bd9ab, type: 3}
+  deathBalloonSound: {fileID: 0}

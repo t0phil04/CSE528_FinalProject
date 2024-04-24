@@ -18,6 +18,10 @@ public class HUDHealthBar : MonoBehaviour
 
     public GameObject successPanel;
     public GameObject failPanel;
+
+    // Reference to the Audio Manager script
+    public AudioManager audioManager;
+
     void Start()
     {
         Instance = this;
@@ -40,6 +44,9 @@ public class HUDHealthBar : MonoBehaviour
             failPanel.SetActive(true);
             Time.timeScale = 0;
         }
+
+        // Play damage tick sound
+        audioManager.PlayDamageTickSound();
     }
 
     // Update the health bar display

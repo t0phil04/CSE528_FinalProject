@@ -812,6 +812,7 @@ GameObject:
   - component: {fileID: 1184295537935930226}
   - component: {fileID: 8159041449673929681}
   - component: {fileID: 4084822534404881364}
+  - component: {fileID: 5007804443688052544}
   m_Layer: 0
   m_Name: FirstTurret_Middle
   m_TagString: Untagged
@@ -852,6 +853,10 @@ MonoBehaviour:
   enemyList: []
   bullet: {fileID: 6125548453554182163, guid: 28c8b0c8158b49a488752901281f60b6, type: 3}
   rotationAxisSpeed: 5
+  towerBlueprint:
+    nextInstantiateTower: {fileID: 0}
+    cost: 0
+    upgradeCost: 0
 --- !u!54 &8159041449673929681
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -900,6 +905,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.06
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5007804443688052544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2672569505399257004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cde2e740b297d41b9828a94172f665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTickSound: {fileID: 8300000, guid: a7fae22399a6e1d448dc0dd2210f1dac, type: 3}
+  attackSound: {fileID: 8300000, guid: 0d44f0cb2e91f5f4ca09aded9a1bd9ab, type: 3}
+  deathBalloonSound: {fileID: 8300000, guid: 65b7d1df144c6944cab9d6686649df0b, type: 3}
 --- !u!1 &2783538820741357214
 GameObject:
   m_ObjectHideFlags: 0

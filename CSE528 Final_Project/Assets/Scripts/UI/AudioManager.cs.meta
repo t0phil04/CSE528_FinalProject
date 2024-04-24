@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f3cde2e740b297d41b9828a94172f665
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - damageTickSound: {fileID: 8300000, guid: a7fae22399a6e1d448dc0dd2210f1dac, type: 3}
+  - attackSound: {fileID: 8300000, guid: 0d44f0cb2e91f5f4ca09aded9a1bd9ab, type: 3}
+  - deathBalloonSound: {fileID: 8300000, guid: 65b7d1df144c6944cab9d6686649df0b, type: 3}
+  executionOrder: 11
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

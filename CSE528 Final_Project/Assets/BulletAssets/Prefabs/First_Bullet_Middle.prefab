@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 64517574919044267}
   - component: {fileID: 8897647271797888676}
   - component: {fileID: 7296921362780914614}
+  - component: {fileID: -6773958863417298961}
   m_Layer: 0
   m_Name: First_Bullet_Middle
   m_TagString: Untagged
@@ -210,9 +211,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bdf0abedef3d34b9fc4dfc83364fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 20
-  moveSpeed: 14
+  bulletDamage: 32
+  moveSpeed: 17
   explodeEffect: {fileID: 1173895295807974, guid: 4a6634c606101a446a027dbb8abf89c0, type: 3}
+  audioManager: {fileID: -6773958863417298961}
+--- !u!114 &-6773958863417298961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6125548453554182163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cde2e740b297d41b9828a94172f665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTickSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 0d44f0cb2e91f5f4ca09aded9a1bd9ab, type: 3}
 --- !u!1 &6920324483311752385
 GameObject:
   m_ObjectHideFlags: 0

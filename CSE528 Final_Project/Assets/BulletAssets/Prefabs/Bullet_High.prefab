@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3921557819868360197}
   - component: {fileID: 882281608891871244}
   - component: {fileID: 3893208410627894319}
+  - component: {fileID: 589384377212292269}
   m_Layer: 0
   m_Name: Bullet_High
   m_TagString: Untagged
@@ -179,9 +180,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bdf0abedef3d34b9fc4dfc83364fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 25
-  moveSpeed: 13
+  bulletDamage: 40
+  moveSpeed: 18
   explodeEffect: {fileID: 1173895295807974, guid: 4a6634c606101a446a027dbb8abf89c0, type: 3}
+  audioManager: {fileID: 589384377212292269}
+--- !u!114 &589384377212292269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5412361610717881778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cde2e740b297d41b9828a94172f665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTickSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 0d44f0cb2e91f5f4ca09aded9a1bd9ab, type: 3}
+  deathBalloonSound: {fileID: 0}
 --- !u!1 &6898331221221690393
 GameObject:
   m_ObjectHideFlags: 0
