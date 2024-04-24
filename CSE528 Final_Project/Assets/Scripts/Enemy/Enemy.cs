@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
         else
         {
             Debug.LogWarning("AudioManager reference is null. Audio will not play.");
-        }
+        } 
 
         Destroy(gameObject);
         PlayerStats.Money += value;
