@@ -69,6 +69,11 @@ public class Enemy : MonoBehaviour
         if (audioManager != null)
         {
             Debug.Log("AudioManager reference is valid.");
+            // Activate the audio source if it's not already active
+            if (!audioManager.gameObject.activeSelf)
+            {
+                audioManager.gameObject.SetActive(true);
+            }
             // Play death sound
             audioManager.PlayBalloonDeathSound();
         }
@@ -85,8 +90,7 @@ public class Enemy : MonoBehaviour
     {
         if (collider.tag.Equals("Player"))
         {
-            // Play death sound
-            audioManager.PlayBalloonDeathSound();
+            
             // Decrease player's health
             HUDHealthBar.Instance.DecreaseHealth(enemyDamage);
         }
